@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quantity Measurement</title>
+  <link rel="stylesheet" href="../css/index.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 class="heading">Welcome To Quantity Measurement App</h1>
+    </div>
+
+    <div class="selection-section">
+      <div>
+        <h2 class="subsection">CHOOSE TYPE</h2>
+        <div class="grid">
+          <div class="modify-grid">
+            <div class="image">
+              <img alt="Length" src="https://img.icons8.com/color/50/ruler.png"/>
+            </div>
+            <h3 class="adjust">Length</h3>
+          </div>
+          <div class="modify-grid">
+            <div class="image">
+              <img alt="Weight" src="https://img.icons8.com/color/50/scales.png"/>
+            </div>
+            <h3 class="adjust">Weight</h3>
+          </div>
+          <div class="modify-grid">
+            <div class="image">
+              <img alt="Temperature" src="https://img.icons8.com/color/50/thermometer.png"/>
+            </div>
+            <h3 class="adjust">Temperature</h3>
+          </div>
+          <div class="modify-grid">
+            <div class="image">
+              <img alt="Volume" src="https://img.icons8.com/color/50/measuring-cup.png"/>
+            </div>
+            <h3 class="adjust">Volume</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="selection-section">
+      <div>
+        <h2 class="subsection">CHOOSE ACTION</h2>
+        <div class="action-tabs">
+          <button class="action-btn">Comparison</button>
+          <button class="action-btn">Conversion</button>
+          <button class="action-btn">Arithmetic</button>
+        </div>
+      </div>
+    </div>
+
+    <section class="converter-section">
+      <div class="converter-row">
+        <div class="converter-col">
+          <p class="converter-label" id="fromLabel">FROM</p>
+          <div class="conv-card">
+            <input type="number" class="conv-input" aria-labelledby="fromLabel" value="64" step="1" />
+            <div class="conv-divider"></div>
+            <div class="conv-bottom">
+              <select class="conv-select" aria-label="From unit">
+                <option selected>Kilometer</option>
+                <option>Meter</option>
+                <option>Centimeter</option>
+                <option>Miles</option>
+                <option>Feet</option>
+              </select>
+            </div>
+          </div>
+        </div>
+
+        <div class="converter-col">
+          <p class="converter-label" id="toLabel">TO</p>
+          <div class="conv-card">
+            <input type="number" class="conv-input" aria-labelledby="toLabel" value="64000" step="1" />
+            <div class="conv-divider"></div>
+            <div class="conv-bottom">
+              <select class="conv-select" aria-label="To unit">
+                <option selected>Meters</option>
+                <option>Kilometer</option>
+                <option>Centimeter</option>
+                <option>Miles</option>
+                <option>Feet</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+</body>
+</html>
