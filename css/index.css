@@ -1,0 +1,155 @@
+.container{
+  display:flex;
+  flex-direction:column;
+}
+.body{
+    background-color:azure;
+}
+.header{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background-color:dodgerblue;
+  height:auto;
+}
+
+.heading{
+  display:flex;
+  color:aliceblue;
+}
+
+.subsection{
+  font-size:large;
+  font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-serif;
+  font-style:normal;
+  font-weight:300;
+  font-display:swap;
+  padding-top:15px;
+  padding-bottom:15px;
+}
+
+.modify-grid{
+  display:flex;
+  height:25%;
+  width:25%;
+  justify-content:center;
+  flex-direction:column;
+}
+
+.modify-grid:hover{
+  background-color:aquamarine;
+  cursor:pointer;
+}
+
+.grid{
+  padding-top:15px;
+  display:flex;
+  flex-direction:row;
+}
+
+.image{
+  display:flex;
+  justify-content:center;
+}
+
+.adjust{
+  display:flex;
+  justify-content:center;
+}
+
+.action-btn{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  width:33%;
+  height:40px;
+  background-color:white;
+  color:darkgray;
+  font-weight:lighter;
+  font-size:medium;
+  font-family:Arial,Helvetica,sans-serif;
+  border-radius:8px;
+  border-color:white;
+}
+
+.action-btn:focus{
+  background-color:dodgerblue;
+}
+
+.action-tabs{
+  display:flex;
+  flex-direction:row;
+  gap:15px;
+}
+
+.converter-section{
+  padding:16px 12px 28px;
+}
+
+.converter-row{
+  display:flex;
+  flex-wrap:wrap;
+  gap:16px;
+}
+
+.converter-col{
+  flex:1 1 320px;
+  max-width:560px;
+}
+
+.converter-label{
+  margin:0 0 8px;
+  font-weight:bold;
+  font-size:14px;
+  letter-spacing:.02em;
+}
+
+.conv-card{
+  background:#fff;
+  border:1px solid #ddd;
+  border-radius:8px;
+  overflow:hidden;
+}
+
+.conv-input{
+  width:100%;
+  border:none;
+  outline:none;
+  padding:22px 18px;
+  font-size:42px;
+  font-weight:800;
+  line-height:1.1;
+  background:#fff;
+  color:#111;
+  appearance:auto;
+  -webkit-appearance:auto;
+  -moz-appearance:textfield;
+}
+
+.conv-divider{
+  height:1px;
+  background:#e6e6e6;
+}
+
+.conv-bottom{
+  padding:14px 16px;
+  border-top:1px solid #e6e6e6;
+}
+
+.conv-select{
+  width:100%;
+  border:none;
+  outline:none;
+  font-size:16px;
+  background:transparent;
+}
+
+.conv-input:focus,
+.conv-select:focus{
+  box-shadow:0 0 0 3px rgba(30,144,255,.25);
+  border-radius:4px;
+}
+
+@media (max-width:720px){
+  .conv-input{font-size:34px;}
+}
