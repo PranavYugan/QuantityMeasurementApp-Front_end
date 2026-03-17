@@ -1,0 +1,225 @@
+{
+  "units": [
+    {
+      "id": 1,
+      "type": "length",
+      "label": "Feet",
+      "symbol": "ft"
+    },
+    {
+      "id": 2,
+      "type": "length",
+      "label": "Inch",
+      "symbol": "in"
+    },
+    {
+      "id": 3,
+      "type": "length",
+      "label": "Yard",
+      "symbol": "yd"
+    },
+    {
+      "id": 4,
+      "type": "length",
+      "label": "Centimeter",
+      "symbol": "cm"
+    },
+    {
+      "id": 5,
+      "type": "length",
+      "label": "Meter",
+      "symbol": "m"
+    },
+    {
+      "id": 6,
+      "type": "length",
+      "label": "Kilometer",
+      "symbol": "km"
+    },
+    {
+      "id": 7,
+      "type": "length",
+      "label": "Mile",
+      "symbol": "mi"
+    },
+    {
+      "id": 8,
+      "type": "length",
+      "label": "Millimeter",
+      "symbol": "mm"
+    },
+    {
+      "id": 9,
+      "type": "weight",
+      "label": "Gram",
+      "symbol": "g"
+    },
+    {
+      "id": 10,
+      "type": "weight",
+      "label": "Kilogram",
+      "symbol": "kg"
+    },
+    {
+      "id": 11,
+      "type": "weight",
+      "label": "Pound",
+      "symbol": "lb"
+    },
+    {
+      "id": 12,
+      "type": "weight",
+      "label": "Ounce",
+      "symbol": "oz"
+    },
+    {
+      "id": 13,
+      "type": "weight",
+      "label": "Ton",
+      "symbol": "t"
+    },
+    {
+      "id": 14,
+      "type": "temperature",
+      "label": "Celsius",
+      "symbol": "°C"
+    },
+    {
+      "id": 15,
+      "type": "temperature",
+      "label": "Fahrenheit",
+      "symbol": "°F"
+    },
+    {
+      "id": 16,
+      "type": "temperature",
+      "label": "Kelvin",
+      "symbol": "K"
+    },
+    {
+      "id": 17,
+      "type": "volume",
+      "label": "Liter",
+      "symbol": "L"
+    },
+    {
+      "id": 18,
+      "type": "volume",
+      "label": "Milliliter",
+      "symbol": "mL"
+    },
+    {
+      "id": 19,
+      "type": "volume",
+      "label": "Gallon",
+      "symbol": "gal"
+    },
+    {
+      "id": 20,
+      "type": "volume",
+      "label": "Cubic Meter",
+      "symbol": "m³"
+    }
+  ],
+  "conversions": [
+    {
+      "id": 1,
+      "from": "Feet",
+      "to": "Inch",
+      "factor": 12,
+      "formula": "value * 12"
+    },
+    {
+      "id": 2,
+      "from": "Inch",
+      "to": "Centimeter",
+      "factor": 2.54,
+      "formula": "value * 2.54"
+    },
+    {
+      "id": 3,
+      "from": "Meter",
+      "to": "Centimeter",
+      "factor": 100,
+      "formula": "value * 100"
+    },
+    {
+      "id": 4,
+      "from": "Kilometer",
+      "to": "Meter",
+      "factor": 1000,
+      "formula": "value * 1000"
+    },
+    {
+      "id": 5,
+      "from": "Mile",
+      "to": "Kilometer",
+      "factor": 1.60934,
+      "formula": "value * 1.60934"
+    },
+    {
+      "id": 6,
+      "from": "Gram",
+      "to": "Kilogram",
+      "factor": 0.001,
+      "formula": "value * 0.001"
+    },
+    {
+      "id": 7,
+      "from": "Pound",
+      "to": "Kilogram",
+      "factor": 0.453592,
+      "formula": "value * 0.453592"
+    },
+    {
+      "id": 8,
+      "from": "Ounce",
+      "to": "Gram",
+      "factor": 28.3495,
+      "formula": "value * 28.3495"
+    },
+    {
+      "id": 9,
+      "from": "Celsius",
+      "to": "Fahrenheit",
+      "factor": null,
+      "formula": "(value * 9/5) + 32"
+    },
+    {
+      "id": 10,
+      "from": "Fahrenheit",
+      "to": "Celsius",
+      "factor": null,
+      "formula": "(value - 32) * 5/9"
+    },
+    {
+      "id": 11,
+      "from": "Celsius",
+      "to": "Kelvin",
+      "factor": null,
+      "formula": "value + 273.15"
+    },
+    {
+      "id": 12,
+      "from": "Liter",
+      "to": "Milliliter",
+      "factor": 1000,
+      "formula": "value * 1000"
+    },
+    {
+      "id": 13,
+      "from": "Gallon",
+      "to": "Liter",
+      "factor": 3.78541,
+      "formula": "value * 3.78541"
+    },
+    {
+      "id": 14,
+      "from": "Cubic Meter",
+      "to": "Liter",
+      "factor": 1000,
+      "formula": "value * 1000"
+    }
+  ],
+  "history": []
+}
