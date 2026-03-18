@@ -41,13 +41,13 @@
 }
 
 .modify-grid:hover{
-  background-color:rgb(40, 72, 234);
+  background-color:#ebecf1;
   cursor:pointer;
   transform:scale(1.05);
 }
 
 .modify-grid.active{
-  background-color:firebrick;
+  background-color:#ebecf1;
   border-radius:8px;
 }
 
