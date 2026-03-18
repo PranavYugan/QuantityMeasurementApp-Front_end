@@ -10,8 +10,6 @@ const state = {
   operator: "+"
 };
 
-const apiBase = "http://localhost:3000";
-
 function showBanner(message) {
   let banner = document.querySelector(".error-banner");
   if (!banner) {
@@ -62,21 +60,13 @@ function setActiveActionButton(index = 0) {
 
 async function loadUnits(type) {
   try {
-    const res = await fetch(`${apiBase}/units`);
-    if (!res.ok) {
-      throw new Error(`Failed to load units: ${res.status}`);
-    }
-    const allUnits = await res.json();
+    const filteredUnits = await getUnits(type);
 
     const selects = document.querySelectorAll(".conv-select");
     if (selects.length < 2) {
       console.warn("Not enough select elements found");
       return null;
     }
-
-    const filteredUnits = allUnits.filter(
-      unit => unit.type && unit.type.toLowerCase() === type.toLowerCase()
-    );
 
     if (!Array.isArray(filteredUnits) || filteredUnits.length === 0) {
       throw new Error(`No units found for type: ${type}`);
@@ -107,7 +97,7 @@ async function loadUnits(type) {
     hideBanner();
     return filteredUnits;
   } catch (err) {
-    if (err instanceof TypeError) {
+    if (err instanceof TypeError || !err) {
       showBanner("Server unavailable");
     } else {
       showBanner("Unable to load units");
@@ -119,11 +109,7 @@ async function loadUnits(type) {
 
 async function loadHistory() {
   try {
-    const res = await fetch(`${apiBase}/history`);
-    if (!res.ok) {
-      throw new Error(`History fetch failed: ${res.status}`);
-    }
-    const history = await res.json();
+    const history = await getHistory();
 
     const existing = document.querySelector(".history-list");
     if (existing) {
