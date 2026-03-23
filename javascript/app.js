@@ -31,3 +31,17 @@ async function handleTypeCardClick() {
     });
   });
 }
+
+function handleActionTabClick() {
+  const actionButtons = document.querySelectorAll(".action-btn");
+  const actionSelector = document.querySelector(".action-selector");
+
+  actionButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      state.action = btn.dataset.action;
+      setActive(actionSelector, btn, ".action-btn");
+      toggleOperators(state.action === "Arithmetic");
+      showResult(0, "");
+    });
+  });
+}
