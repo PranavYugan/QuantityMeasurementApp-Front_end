@@ -29,3 +29,28 @@ async function getHistory() {
     throw err;
   }
 }
+
+async function getConversion(from, to) {
+  try {
+    if (from === to) {
+      return { from, to, factor: 1, formula: "value * 1" };
+    }
+
+    const res = await fetch(`${BASE_URL}/conversions?from=${from}&to=${to}`);
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    const data = await res.json(); 
+    
+    if (!data.length) {
+      throw new Error("Conversion not available for this pair");
+    }
+    
+    return data[0];
+  } catch (err) {
+    if (err instanceof TypeError) {
+      throw new Error("Conversion not available for this pair");
+    }
+    throw err;
+  }
+}
