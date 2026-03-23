@@ -54,3 +54,22 @@ async function getConversion(from, to) {
     throw err;
   }
 }
+
+async function saveHistory(record) {
+  try {
+    const res = await fetch(`${BASE_URL}/history`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(record)
+    });
+    
+    if (!res.ok) {
+      throw new Error(`HTTP ${res.status}`);
+    }
+    
+    return await res.json();
+  } catch (err) {
+    console.warn("Unable to save history:", err);
+    return null;
+  }
+}
