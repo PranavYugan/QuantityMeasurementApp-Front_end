@@ -71,3 +71,20 @@ async function saveHistory(record) {
     return null;
   }
 }
+
+function applyConversion(value, convObj) {
+  if (isNaN(value)) {
+    throw new Error("Invalid number");
+  }
+
+  if (convObj.factor !== null) {
+    return parseFloat((value * convObj.factor).toFixed(6));
+  } else {
+    try {
+      const expr = convObj.formula.replace(/value/g, value);
+      return parseFloat(eval(expr).toFixed(6));
+    } catch (err) {
+      throw new Error("Bad formula");
+    }
+  }
+}
