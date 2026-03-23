@@ -17,16 +17,14 @@ async function getUnits(type) {
 
 async function getHistory() {
   try {
-    const res = await fetch(`${BASE_URL}/history`);
+    const res = await fetch(`${BASE_URL}/history?_sort=timestamp&_order=desc`);
     if (!res.ok) {
       throw new Error(`HTTP ${res.status}`);
     }
     return await res.json();
   } catch (err) {
-    if (err instanceof TypeError) {
-      return null;
-    }
-    throw err;
+    console.warn("Unable to load history:", err);
+    return [];
   }
 }
 
