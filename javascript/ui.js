@@ -22,3 +22,12 @@ function populateDropdown(selectEl, units) {
     });
   }
 }
+
+function setActive(parentEl, clickedEl, childSelector) {
+  if (!parentEl) {
+    return;
+  }
+
+  parentEl.querySelectorAll(childSelector).forEach(el => el.classList.remove("active"));
+  clickedEl.classList.add("active");
+}
